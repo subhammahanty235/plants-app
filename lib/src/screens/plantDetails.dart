@@ -5,9 +5,12 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plantdirectory/src/constants/colors.dart';
+import 'package:plantdirectory/src/models/plant_model.dart';
+import 'package:plantdirectory/src/screens/homeScreen.dart';
 
 class PlantDetails extends StatefulWidget {
-  const PlantDetails({super.key});
+  PlantModel plant;
+  PlantDetails({super.key , required this.plant});
 
   @override
   State<PlantDetails> createState() => _PlantDetailsState();
@@ -19,6 +22,7 @@ class _PlantDetailsState extends State<PlantDetails>
 
   @override
   Widget build(BuildContext context) {
+    print(widget.plant.survivalRequirements);
     return Scaffold(
         body: SafeArea(
       child: Container(
@@ -48,7 +52,7 @@ class _PlantDetailsState extends State<PlantDetails>
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(5)),
                                 child: SvgPicture.asset(
-                                  'assets/icons/back-svgrepo-com.svg',
+                                  'assets/icons/arrow-prev-svgrepo-com.svg',
                                   color: Colors.black,
                                 )
                                 // SvgPicture.asset(
@@ -60,18 +64,18 @@ class _PlantDetailsState extends State<PlantDetails>
                                 height: 40,
                                 width: 40,
                                 decoration: BoxDecoration(
-                                    color: BGgreen,
+                                    color: widget.plant.lovedByMe == true? BGgreen : LightGreen,
                                     borderRadius: BorderRadius.circular(5)),
                                 child: SvgPicture.asset(
                                   'assets/icons/love-svgrepo-com.svg',
-                                  color: Colors.white,
+                                  color: widget.plant.lovedByMe== false? BGgreen : LightGreen,
                                 )),
                           ],
                         ),
                         Container(
                           margin: EdgeInsets.fromLTRB(
                               (MediaQuery.of(context).size.width - 130),
-                              40,
+                              35,
                               0,
                               0),
                           height: (MediaQuery.of(context).size.height * 0.40),
@@ -92,7 +96,7 @@ class _PlantDetailsState extends State<PlantDetails>
                                           fontSize: 13),
                                     ),
                                     Text(
-                                      "Small",
+                                      widget.plant.size,
                                       style: TextStyle(
                                         color: BGgreen,
                                         fontSize: 17,
@@ -112,7 +116,8 @@ class _PlantDetailsState extends State<PlantDetails>
                                           fontSize: 13),
                                     ),
                                     Text(
-                                      "65%",
+                                     
+                                      widget.plant.survivalRequirements['humidity'],
                                       style: TextStyle(
                                         color: BGgreen,
                                         fontSize: 17,
@@ -132,7 +137,7 @@ class _PlantDetailsState extends State<PlantDetails>
                                           fontSize: 13),
                                     ),
                                     Text(
-                                      "Diffused",
+                                      widget.plant.survivalRequirements['light'],
                                       style: TextStyle(
                                         color: BGgreen,
                                         fontSize: 17,
@@ -152,7 +157,7 @@ class _PlantDetailsState extends State<PlantDetails>
                                           fontSize: 13),
                                     ),
                                     Text(
-                                      "17-24 ℃",
+                                      widget.plant.survivalRequirements['temperature'],
                                       style: TextStyle(
                                         color: BGgreen,
                                         fontSize: 17,
@@ -186,7 +191,7 @@ class _PlantDetailsState extends State<PlantDetails>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Decorative Plant",
+                                  "${widget.plant.type} Plant",
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
@@ -197,7 +202,7 @@ class _PlantDetailsState extends State<PlantDetails>
                                   height: 4,
                                 ),
                                 Text(
-                                  "\$210.00",
+                                  "\$ ${widget.plant.price}",
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 12,
@@ -271,7 +276,8 @@ class _PlantDetailsState extends State<PlantDetails>
                               height: 6,
                             ),
                             Text(
-                              "Rubber fig Houseplant Flowerpot \nit is added tothe category of decorative \nplants",
+                              widget.plant.description,
+                              // "Rubber fig Houseplant Flowerpot \nit is added tothe category of decorative \nplants",
                               style: TextStyle(
                                 color: Color.fromARGB(255, 116, 113, 113),
                                 fontSize: 15,
@@ -307,8 +313,8 @@ class _PlantDetailsState extends State<PlantDetails>
             Positioned(
               top: (MediaQuery.of(context).size.height * 0.35) -
                   140,
-              child: Image.asset(
-                'assets/images/plant-2.png',
+              child: Image.network(
+                widget.plant.image,
                 height: (MediaQuery.of(context).size.height * 0.60) - 100,
               ),
             ),

@@ -1,0 +1,177 @@
+{
+    "plants": [
+      {
+        "Name": "Rose",
+        "rating": 4.5,
+        "price": 12.99,
+        "MyPlants": true,
+        "mostPopular": true,
+        "LovedByMe": true,
+        "size": "Medium",
+        "survivalRequirements": {
+          "humidity": "Moderate",
+          "light": "Full Sun",
+          "temperature": "20-25°C"
+        },
+        "Type": "Decorative",
+        "description": "Roses are classic flowering plants \nknown for their beauty and fragrance.",
+        "image": "https://res.cloudinary.com/dbnqqpobe/image/upload/v1692382479/plant-api-images/41Nb-QZ8CKL._AC_UF1000_1000_QL80_-removebg-preview_iarwh2.png"
+      },
+      {
+        "Name": "Orchid",
+        "rating": 4.1,
+        "price": 28.75,
+        "MyPlants": false,
+        "mostPopular": true,
+        "LovedByMe": true,
+        "size": "Medium",
+        "survivalRequirements": {
+          "humidity": "High",
+          "light": "Indirect Light",
+          "temperature": "18-24°C"
+        },
+        "Type": "Decorative",
+        "description": "Orchids are elegant flowering plants known for their vibrant and exotic blooms.",
+        "image": "https://res.cloudinary.com/dbnqqpobe/image/upload/v1692383582/plant-api-images/istockphoto-1201179802-612x612-removebg-preview_auuczq.png"
+        
+      },
+      {
+        "Name": "Tomato",
+        "rating": 4.0,
+        "price": 3.49,
+        "MyPlants": false,
+        "mostPopular": false,
+        "LovedByMe": false,
+        "size": "Small",
+        "survivalRequirements": {
+          "humidity": "Average",
+          "light": "Full Sun",
+          "temperature": "15-30°C"
+        },
+        "Type": "Vegetable",
+        "description": "Tomatoes are popular vegetables used in a wide range of culinary dishes.",
+        "image": "https://res.cloudinary.com/dbnqqpobe/image/upload/v1692382737/plant-api-images/istockphoto-1262679914-612x612-removebg-preview_bhkcpc.png"
+      },
+      {
+        "Name": "Lavender",
+        "rating": 4.7,
+        "price": 8.75,
+        "MyPlants": false,
+        "mostPopular": false,
+        "LovedByMe": true,
+        "size": "Small",
+        "survivalRequirements": {
+          "humidity": "Low",
+          "light": "Full Sun",
+          "temperature": "18-24°C"
+        },
+        "Type": "Decorative",
+        "description": "Lavender is a fragrant herb often used for its aromatic and medicinal properties.",
+        "image": "https://res.cloudinary.com/dbnqqpobe/image/upload/v1692382897/plant-api-images/in-pot-lavendel-paars-600x600-1-removebg-preview_wjgtyl.png"
+      },
+      {
+        "Name": "Snake Plant",
+        "rating": 4.2,
+        "price": 20.0,
+        "MyPlants": true,
+        "mostPopular": false,
+        "LovedByMe": true,
+        "size": "Medium",
+        "survivalRequirements": {
+          "humidity": "Low",
+          "light": "Low Light",
+          "temperature": "15-25°C"
+        },
+        "Type": "Indoor",
+        "description": "Snake plants are hardy indoor plants known for their air-purifying qualities.",
+        "image": "https://res.cloudinary.com/dbnqqpobe/image/upload/v1692383172/plant-api-images/png-transparent-snake-plant-in-gray-pot-bonsai-flowerpot-template-potted-green-plants-leaf-plant-stem-green-apple-removebg-preview_xen6b7.png"
+      },
+      {
+        "Name": "Basil",
+        "rating": 4.6,
+        "price": 6.99,
+        "MyPlants": true,
+        "mostPopular": false,
+        "LovedByMe": false,
+        "size": "Small",
+        "survivalRequirements": {
+          "humidity": "Average",
+          "light": "Full Sun",
+          "temperature": "18-25°C"
+        },
+        "Type": "Herb",
+        "description": "Basil is a fragrant herb commonly used in cooking, especially in Italian cuisine.",
+        "image": "https://res.cloudinary.com/dbnqqpobe/image/upload/v1692383285/plant-api-images/c1406fef80db9de8348e851c2ca1fa18-removebg-preview_qsyhe8.png"
+      },
+      {
+        "Name": "Fiddle Leaf Fig",
+        "rating": 3.8,
+        "price": 45.5,
+        "MyPlants": true,
+        "mostPopular": false,
+        "LovedByMe": true,
+        "size": "Large",
+        "survivalRequirements": {
+          "humidity": "Moderate",
+          "light": "Bright Indirect Light",
+          "temperature": "20-30°C"
+        },
+        "Type": "Indoor",
+        "description": "Fiddle Leaf Fig is a popular indoor tree with large, glossy leaves.",
+        "image": "https://res.cloudinary.com/dbnqqpobe/image/upload/v1692383372/plant-api-images/plants_fiddle_leaf_fig_white_pot_hero_6-removebg-preview_vnsiiq.png"
+      },
+      {
+        "Name": "Succulent",
+        "rating": 4.8,
+        "price": 9.99,
+        "MyPlants": true,
+        "mostPopular": true,
+        "LovedByMe": true,
+        "size": "Tiny",
+        "survivalRequirements": {
+          "humidity": "Low",
+          "light": "Bright Light",
+          "temperature": "15-30°C"
+        },
+        "Type": "Cactus",
+        "description": "Succulents are water-retaining plants known for their unique shapes and easy care.",
+        "image": "https://res.cloudinary.com/dbnqqpobe/image/upload/v1692383499/plant-api-images/il_fullxfull.3471680244_6xy6-removebg-preview_e2fgny.png"
+      },
+      
+      {
+        "Name": "Mint",
+        "rating": 4.4,
+        "price": 5.25,
+        "MyPlants": true,
+        "mostPopular": true,
+        "LovedByMe": false,
+        "size": "Small",
+        "survivalRequirements": {
+          "humidity": "Average",
+          "light": "Partial Sun",
+          "temperature": "15-25°C"
+        },
+        "Type": "Herb",
+        "description": "Mint is a refreshing herb commonly used in beverages and culinary dishes.",
+        "image": "https://res.cloudinary.com/dbnqqpobe/image/upload/v1692383695/plant-api-images/stock-photo-fresh-mint-growing-in-a-flowerpot-to-ensure-the-freshest-ingredients-in-the-kitchen-for-cooking-and-142426210-removebg-preview_nxk0ux.png"
+      },
+      {
+        "Name": "Pothos",
+        "rating": 4.9,
+        "price": 15.0,
+        "MyPlants": true,
+        "mostPopular": true,
+        "LovedByMe": true,
+        "size": "Medium",
+        "survivalRequirements": {
+          "humidity": "Low",
+          "light": "Low to Medium Light",
+          "temperature": "18-30°C"
+        },
+        "Type": "Indoor",
+        "description": "Pothos is a versatile and low-maintenance indoor plant with trailing vines.",
+        "image": "https://res.cloudinary.com/dbnqqpobe/image/upload/v1692383879/plant-api-images/money-plant-with-beautiful-pot_1-removebg-preview_m0yezd.png"
+      }
+    ]
+  }
+  

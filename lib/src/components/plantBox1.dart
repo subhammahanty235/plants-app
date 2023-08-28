@@ -6,9 +6,13 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plantdirectory/src/constants/colors.dart';
+import 'package:plantdirectory/src/models/plant_model.dart';
+import 'package:plantdirectory/src/screens/homeScreen.dart';
+import 'package:plantdirectory/src/screens/plantDetails.dart';
 
 class PlantBox1 extends StatelessWidget {
-  const PlantBox1({super.key});
+  PlantModel data;
+  PlantBox1({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +27,21 @@ class PlantBox1 extends StatelessWidget {
         ),
         child: Stack(
           children: [
+            InkWell(
+
+              onTap: (){
+                Navigator.push(context , MaterialPageRoute(builder: (context)=>PlantDetails(plant: data)));
+              },
+              child:
+            
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   alignment: Alignment.center,
-                  child: Image.asset(
-                    'assets/images/plant-3.png',
+                  child: Image.network(
+                    data.image,
                     height: 85,
                   ),
                 ),
@@ -38,7 +49,7 @@ class PlantBox1 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Costa Farm",
+                     data.name,
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 12,
@@ -54,20 +65,17 @@ class PlantBox1 extends StatelessWidget {
                   ],
                 )
               ],
-            ),
+            ),),
             Positioned(
-              left:76,
-                child: Container(
-              padding: EdgeInsets.all(2),
-              height: 20,
-              width: 20,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(5)
-              ),
-              child: SvgPicture.asset('assets/icons/love-svgrepo-com.svg')
-            ),
-            
+              left: 76,
+              child: Container(
+                  padding: EdgeInsets.all(2),
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: data.lovedByMe==true? SvgPicture.asset('assets/icons/love-svgrepo-com.svg' ,):SvgPicture.asset('assets/icons/love-svgrepo-com.svg' , color: Colors.redAccent,)),
             )
           ],
         ));
